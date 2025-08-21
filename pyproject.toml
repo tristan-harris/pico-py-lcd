@@ -1,0 +1,4 @@
+[tool.pyright]
+extraPaths = [".venv/lib/python3.12/site-packages/"]
+reportMissingImports = true
+reportMissingModuleSource = false
