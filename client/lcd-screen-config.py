@@ -42,10 +42,10 @@ HEADING = r"""
 # id, list name, list description
 MODES = [
     ("dvd_bounce", "󰗮 Bounce", "A bouncing DVD logo. Will it hit the corner?"),
-    ("currency_tracker", "󰁰 Currency Tracker", "Get the latest stock prices."),
-    ("idle", "󰒲 Idle", "Nothing ever happens."),
-    ("jokes", "󰍬 Jokes", "Only the funniest jokes."),
-    ("scrolling_background", "󰜱 Scrolling Background", "A bird flying forever."),
+    ("currency_tracker", "󰁰 Currency Tracker", "Get the latest stock and commodities prices."),
+    ("idle", "󰒲 Idle", "Uses minimum power."),
+    ("jokes", "󰍬 Jokes", "Only the best jokes from jokeapi.dev"),
+    ("scrolling_background", "󰜱 Scrolling Background", "A bird flying over mountains."),
     ("text_scroll", "󰦨 Scrolling Text", "May require squinting."),
     ("status", "󰖩 Status", "Shows current device status."),
     ("test", "󰣪 Test", "Testing 1, 2, 3..."),
