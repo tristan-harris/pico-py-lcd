@@ -89,7 +89,7 @@ def print_help():
     print(f"{MAG}t{RES} -> Toggle transfer type (USB or WiFi)")
     print(f"{MAG}c{RES} -> Clear screen")
     print(f"{MAG}h{RES} -> Print this help")
-    print(f"{MAG}q{RES} -> Quit)")
+    print(f"{MAG}q{RES} -> Quit")
 
 def print_choices(transfer_preference: str):
     print(f"\nChoose a mode (via {BOL}{transfer_preference}{RES}):")
@@ -100,11 +100,20 @@ def print_choices(transfer_preference: str):
         print(f"{MAG}{BOL}{i + 1}{RES} {BOL}{mode_data[1].ljust(max_length)}{RES} - {mode_data[2]}")
     print(f"\nEnter a number ({MAG}1{RES} - {MAG}{len(MODES)}{RES}) or letter ({MAG}t{RES}/{MAG}c{RES}/{MAG}h{RES}/{MAG}q{RES})")
 
+def get_input() -> str:
+    try:
+        user_input: str = input()
+    except EOFError:
+        print(CLS, end="")
+        quit()
+
+    return user_input
+
 def choose_mode(transfer_preference: str) -> int:
     while True:
         print_choices(transfer_preference)
         print(f"Input: ", end="")
-        user_input: str = input()
+        user_input: str = get_input()
 
         if user_input.isnumeric():
             user_selection: int = int(user_input)
